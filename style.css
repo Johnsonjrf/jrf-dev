@@ -589,10 +589,13 @@ hr{
 
     .home{
         flex-direction: column;
+        gap: 3rem;
     }
 
     .home img{
-        width: 70vw;
+        width: 35rem;
+        height: 35rem;
+        border-radius: 50%;
     }
 
     .home-bio{
@@ -615,6 +618,18 @@ hr{
 
     .animated-shape, .circle{
         display: none;
+    }
+
+    .about{
+        margin-top: 0;
+    }
+
+    .home img{
+        width: ;
+    }
+
+    p{
+        font-size: 1.5rem;
     }
     
 }
