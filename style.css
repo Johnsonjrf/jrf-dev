@@ -156,7 +156,7 @@ ul li{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 500;
+    z-index: 500[];
     /* overflow-x: hidden; */
 }
 
@@ -670,6 +670,14 @@ hr{
     .about-text p{
         font-size: 1.5rem;
         line-height: 1.1;
+    }
+
+    .animated-text{
+        font-size: 2rem;
+    }
+
+    .social-media a .bx{
+        font-size: 1.4rem;
     }
 }
 

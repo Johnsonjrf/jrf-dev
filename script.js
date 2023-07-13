@@ -16,13 +16,17 @@ window.onscroll = () => {
     menuBar.classList.remove("active")
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-   
+window.onload = () => {
     var audio = new Audio('welcome.aac');
     audio.play();
+}
+
+// document.addEventListener("DOMContentLoaded", () => {
+   
     
     
-})
+    
+// })
 
 const appHeight = () => {
     const currentHeight = window.innerHeight
