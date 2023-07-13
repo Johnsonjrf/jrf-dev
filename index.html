@@ -246,9 +246,12 @@
         <h2 class="greeting"></h2>
         <form class="form">
             <input class="sender-name" type="text" name="Name" placeholder="Your Name">
-            <input type="email" name="Email" placeholder="Your Email" required>
-            <textarea class="textarea"  id="" cols="30" rows="6" placeholder="Your Message..." name="Message" required></textarea>
-            <input type="submit" class="btn" value="Send Message">
+            <p class="name-error"></p>
+            <input type="email" class="email" name="Email" placeholder="Your Email">
+            <p class="email-error"></p>
+            <textarea class="textarea"  id="" cols="30" rows="6" placeholder="Your Message..." name="Message"></textarea>
+            <p class="msg-error"></p>
+            <input type="submit" class="btn" value="Send Message" id="submit">
             <p class="msg-submitted-success"></p>
         </form>
         <!-- https://script.google.com/macros/s/AKfycbwfvlKM73rOcat9znYshrJhxkT-m0qy-u5C66BBIM_73hIT0tZkXcqJ-ZQ_uxegeMvq/exec -->

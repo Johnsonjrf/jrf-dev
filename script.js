@@ -1,6 +1,9 @@
 // activate menu button
 let menuBtn = document.querySelector("#menu-btn");
 let menuBar = document.querySelector(".menu-bar");
+const emailError = document.querySelector(".email-error")
+const msgError = document.querySelector(".msg-error")
+const nameError = document.querySelector(".name-error")
 
 menuBtn.addEventListener("click", () => {
     menuBtn.classList.toggle("bx-x")
@@ -16,6 +19,7 @@ window.onscroll = () => {
     menuBar.classList.remove("active")
 }
 
+// play audio when window load
 window.onload = () => {
     var audio = new Audio('welcome.aac');
     audio.play();
@@ -89,6 +93,43 @@ function feedbackMsg () {
     }, 3000)
 }
 
+// form-validation
+document.getElementById("submit").addEventListener("click", (e) => {
+    var regExp = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
+    const emailText = document.querySelector(".email")
+    
+    const msgText = document.querySelector(".textarea")
+    
+    const nameText = document.querySelector(".sender-name")
+    
+    
+// check if the email is valid
+    if(regExp.test(emailText.value)){
+        emailError.innerHTML = ""
+    } else {
+        emailError.innerHTML = "Please enter a valid email address"
+    }
+
+// check if inputs are not empty
+
+    if (msgText.value.length > 0) {
+        msgError.innerHTML = ""
+    } else {
+        msgError.innerHTML = "this field can't be empty"
+    }
+
+    if(nameText.value.length > 0){
+        nameError.innerHTML = ""
+    } else{
+        nameError.innerHTML ="i will like to know your name"
+    }
+
+    // $('[type="email"]').on('keyup', function() {
+    //   $('.message').hide();
+    //   regExp.test( $(this).val() ) ? $('.message.success').show() : $('.message.error').show();
+    // });
+})
+
 // Submit formdata to the google sheets
 const formElement = document.querySelector(".form");
 formElement.addEventListener("submit", (e) => {
@@ -104,9 +145,17 @@ formElement.addEventListener("submit", (e) => {
     })
 
     // feedbackMsg()
-    setTimeout(feedbackMsg, 3000)
+    if(emailError.innerHTML === "" && nameError.innerHTML === "" && msgError.innerHTML === "") {
+        setTimeout(feedbackMsg, 3000)
+    }
+    
     e.preventDefault()
     
     
 })
+
+
+
+
+
 
