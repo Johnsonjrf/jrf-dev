@@ -83,9 +83,9 @@ function feedbackMsg () {
     const inputs = document.querySelectorAll("input")
     document.querySelector(".msg-submitted-success").innerHTML = "Your Message was sent successfully";
     setTimeout(function() {
-        document.querySelector(".msg-submitted-success").innerHTML = " ";
+        document.querySelector(".msg-submitted-success").innerHTML = "";
         for (let i = 0; i < inputs.length - 1; i++) {
-            inputs[i].value = " "
+            inputs[i].value = ""
         };
         document.querySelector(".textarea").value = ""
         document.querySelector(".greeting").innerHTML = ""
