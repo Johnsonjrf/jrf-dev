@@ -156,7 +156,7 @@ ul li{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 500[];
+    z-index: 5000;
     /* overflow-x: hidden; */
 }
 
@@ -553,7 +553,7 @@ hr{
     background: rgba(0, 0, 0, 0.9);
     display: none;
     transition: display 1s ease-in-out;
-    z-index: 10000;
+    z-index: 1000000;
    }
 
    .menu-bar.active{
