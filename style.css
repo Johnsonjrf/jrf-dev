@@ -431,15 +431,32 @@ span{
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
+    gap: .7rem;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    text-align: center;
+}
+
+.card-overlay small{
+    background: rgba(0, 0, 0, 0.8);
+    padding: .5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #2ab;
+    color: #2ab;
+    font-size: .9rem;
+    
 }
 
 .card-overlay:hover{
     background: rgba(0, 0, 0, 0);
     color: #000;
     transition: 0.4s all linear;
+}
+
+.card-overlay a{
+    display: inline-block;
 }
 
 .card-overlay a .bx{
