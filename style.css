@@ -310,6 +310,7 @@ span{
     justify-content: center;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
     /* max-height: 100%; */
 }
 
@@ -345,6 +346,7 @@ span{
     justify-content: center;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
 }
 
 .skills-items{
@@ -395,6 +397,7 @@ span{
     justify-content: center;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
     
 }
 
